@@ -1,0 +1,14 @@
+{
+  "stringField": "stringField",
+  "intField": 1000,
+  "bigDecimalField": "8.00",
+  "localDateField": "2020-01-01",
+  "localDataTimeFiled": "2023-07-31 21:13:18",
+  "checkSubentity": {
+    "stringField": "stringField"
+  },
+  "listCollectionField": [
+    "first_element",
+    "second_element"
+  ]
+}

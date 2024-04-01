@@ -1,0 +1,37 @@
+{
+  "name": "bigDecimalRule",
+  "condition": {
+    "$and": [
+      {
+        "bigDecimalField": {
+          "$gt": "5.00"
+        }
+      },
+      {
+        "bigDecimalField": {
+          "$le": "10.00"
+        }
+      },
+      {
+        "bigDecimalField": {
+          "$gte": "5.00"
+        }
+      },
+      {
+        "bigDecimalField": {
+          "$lte": "10.00"
+        }
+      },
+      {
+        "bigDecimalField": {
+          "$eq": "8.00"
+        }
+      },
+      {
+        "bigDecimalField": {
+          "$ne": "100.00"
+        }
+      }
+    ]
+  }
+}

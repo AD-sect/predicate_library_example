@@ -1,0 +1,12 @@
+{
+  "name": "compareFieldsRule",
+  "condition": {
+    "$and": [
+      {
+        "localDateField": {
+          "$gt": "2019-01-01"
+        }
+      }
+    ]
+  }
+}

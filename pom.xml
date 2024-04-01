@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>ru.raiffaisen.predicat</groupId>
+	<artifactId>example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>example</name>
+	<description>example of using library</description>
+
+	<properties>
+		<java.version>17</java.version>
+		<json-predicate.version>0.0.8</json-predicate.version>
+		<!-- PROJECT INFORMATION -->
+		<project.domain.name>github.com</project.domain.name>
+		<project.domain.reverse>com.github</project.domain.reverse>
+		<project.owner.login>thiagolvlsantos</project.owner.login>
+		<project.owner.name>Thiago Santos</project.owner.name>
+		<project.owner.email>thiagolvlsantos@gmail.com</project.owner.email>
+		<project.inception>2021</project.inception>
+
+		<!-- COMPILER -->
+<!--		<java.version>1.8</java.version>-->
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+		<!-- ENCODING -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<!-- LOMBOK -->
+		<lombok.version>1.18.26</lombok.version>
+
+		<!-- JUNIT -->
+		<junit.version>4.13.2</junit.version>
+
+		<!-- SONARCLOUD -->
+		<sonar.user>thiagolvlsantos</sonar.user>
+		<sonar.organization>${sonar.user}-projects</sonar.organization>
+		<sonar.projectKey>${sonar.user}_${project.artifactId}</sonar.projectKey>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
+		<!-- DEPENDENCIES -->
+		<jackson.version>2.14.2</jackson.version>
+		<commons.version>1.9.4</commons.version>
+		<logback.version>1.4.6</logback.version>
+		<slf4j.version>2.0.6</slf4j.version>
+		<json-flattener.version>0.7.1</json-flattener.version>
+
+		<!-- PERSONAL -->
+		<git-commons.version>1.0.31</git-commons.version>
+	</properties>
+
+	<scm>
+		<url>https://${project.domain.name}/${project.owner.login}/${project.artifactId}.git</url>
+		<connection>scm:git:git://${project.domain.name}/${project.owner.login}/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@${project.domain.name}:${project.owner.login}/${project.artifactId}.git</developerConnection>
+		<tag>json-predicate-0.0.8</tag>
+	</scm>
+
+	<url>https://${project.domain.name}/${project.owner.login}/${project.artifactId}</url>
+	<inceptionYear>${project.inception}</inceptionYear>
+
+	<organization>
+		<name>${project.domain.reverse}.${project.owner.login}</name>
+		<url>https://${project.domain.name}/${project.owner.login}</url>
+	</organization>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-test</artifactId>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+
+    <!--Library needed for predicated-->
+<!--		<dependency>-->
+<!--			<groupId>io.github.thiagolvlsantos</groupId>-->
+<!--			<artifactId>json-predicate</artifactId>-->
+<!--			<version>${json-predicate.version}</version>-->
+<!--		</dependency>-->
+
+
+		<dependency>
+			<groupId>io.github.thiagolvlsantos</groupId>
+			<artifactId>git-commons</artifactId>
+			<version>${git-commons.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- logging -->
+<!--		<dependency>-->
+<!--			<groupId>ch.qos.logback</groupId>-->
+<!--			<artifactId>logback-classic</artifactId>-->
+<!--			<version>${logback.version}</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>org.slf4j</groupId>-->
+<!--			<artifactId>slf4j-api</artifactId>-->
+<!--			<version>${slf4j.version}</version>-->
+<!--			<scope>provided</scope>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- For JSON deserialization -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<!-- For value access (IAccess) -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons.version}</version>
+		</dependency>
+
+		<!-- Testing libs -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.wnameless.json</groupId>
+			<artifactId>json-flattener</artifactId>
+			<version>${json-flattener.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>2.13.0</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>9</source>
+					<target>9</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

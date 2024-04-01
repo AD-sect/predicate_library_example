@@ -1,0 +1,42 @@
+{
+  "name": "stringRule",
+  "condition": {
+    "$and": [
+      {
+        "stringField": {
+          "$eq": "stringField"
+        }
+      },
+      {
+        "stringField": {
+          "$ne": "notStringField"
+        }
+      },
+      {
+        "stringField": {
+          "$match": "^string[a-zA-Z0-9]+"
+        }
+      },
+      {
+        "stringField": {
+          "$nmatch": "^otherString[a-zA-Z0-9]+"
+        }
+      },
+      {
+        "stringField": {
+          "$contains": "string"
+        }
+      },
+      {
+        "stringField": {
+          "$ncontains": "otherString"
+        }
+      },
+      {
+        "stringField": {
+          "$notNull": "not_null"
+        }
+      }
+    ]
+  }
+}

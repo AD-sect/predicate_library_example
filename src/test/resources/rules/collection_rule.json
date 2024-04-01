@@ -1,0 +1,17 @@
+{
+  "name": "collectionRule",
+  "condition": {
+    "$and": [
+      {
+        "listCollectionField": {
+          "$memberOf": ["first_element", "second_element"]
+        }
+      },
+      {
+        "listCollectionField": {
+          "$contains": "first_element"
+        }
+      }
+    ]
+  }
+}

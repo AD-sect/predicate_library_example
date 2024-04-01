@@ -1,0 +1,29 @@
+{
+  "name": "andOrRule",
+  "condition": {
+    "$or": [
+      {
+        "$and": [
+          {
+            "stringField": {
+              "$contains": "AAA"
+            }
+          },
+          {
+            "intField": {
+              "$gt": "1000000"
+            }
+          }
+        ]
+      },
+      {
+        "intField": {
+          "$gt": "10"
+        }
+      }
+    ]
+  }
+}
+
+
+

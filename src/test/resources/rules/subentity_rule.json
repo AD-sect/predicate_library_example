@@ -1,0 +1,17 @@
+{
+  "name": "subentityRule",
+  "condition": {
+    "$and": [
+      {
+        "checkSubentity.stringField": {
+          "$eq": "stringField"
+        }
+      },
+      {
+        "checkSubentity.stringField": {
+          "$ne": "notStringField"
+        }
+      }
+    ]
+  }
+}

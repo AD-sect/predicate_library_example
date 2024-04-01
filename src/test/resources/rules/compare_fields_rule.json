@@ -1,0 +1,12 @@
+{
+  "name": "compareFieldsRule",
+  "condition": {
+    "$and": [
+      {
+        "stringField": {
+          "$eq": "@checkSubentity.stringField"
+        }
+      }
+    ]
+  }
+}
